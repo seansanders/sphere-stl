@@ -47,7 +47,7 @@ def create_stls():
         
         faces = get_param(solidParams, "faces")
         
-        if faces in faceShapes:
+        if isinstance(faces, str) and (faces in faceShapes):
             faces = faceShapes[faces]
             
         elif not isinstance(faces, dict):
