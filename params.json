@@ -1,0 +1,62 @@
+{
+	"outputPath": "example",
+	"fileName": "examplergb",
+	
+	"comment0": ["depthImages must be of length >= 1. holeImage and",
+				 " colorImage are optional (may be null)."],
+	"depthImages": [
+		"exampleDepth0.png",
+		"exampleDepth1.png"
+	],
+	"holeImage": "exampleHoles.png",
+	"colorImage": "exampleColor.png",
+	
+	"comment1": ["depthImageWeights must be the same",
+				 " length as depthImages."],
+	"depthImageWeights": [
+		0.555556,
+		0.444444
+	],
+	
+	"comment2": ["colorMode may be 'RGB' or 'BGR'; null or",
+				 " any other value will result in no color information ",
+				 " being written."],
+	"colorMode": "BGR",
+	
+	"comment3": ["solid may be 'sphere' or 'prism'."],
+	"solid": "sphere",
+	
+	"comment4": ["scale and rotation may be null.",
+	             "proj must be either 'equirectangular' or 'cylindrical'. ",
+				 "faces must be either 'cube', 'octahedron', 'rhomb',",
+				 " 'icosahedron', or an object as described in the README. ",
+				 "rotation, if not null, is a set of Euler angles",
+				 " (about x, y, and z) in degrees. ",
+				 "rotationMode must be a string of 3 axes",
+				 " as defined in the README. ",
+				 "scale specifies the scale over the x, y, and z axes and",
+				 " the absolute value of negative values is taken."
+				 ],
+	"sphereParams": {
+		"projection": "equirectangular",
+		"faces": "rhomb",
+		"minAltitude": 9,
+		"maxAltitude": 11,
+		"lowCutoff": 8,
+		"rotation": [0, 0, 0],
+		"rotationMode": "XYZ",
+		"scale": [1, 1, 1],
+		"resolution1": 128,
+		"resolution2": 128,
+		"flatBottomFaces": true,
+		"flatTopFaces": false
+	},
+	"prismParams": {
+		 "width": 1,
+		 "height": 1,
+		 "resolutionX": 128,
+		 "resolutionY": 128,
+		 "minAltitude": 0.5,
+		 "maxAltitude": 1
+	}
+}
